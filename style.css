@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-wrap: wrap;
+    background-color: rgb(75, 75, 75);
+
+}
+.hours, .minites, .secound, .am{
+    width: 100px;
+    margin: 1rem;
+    text-align: center;
+    align-items: center;
+    background-color: #000;
+    justify-content: center;
+    display: flex;
+    height: 100px;
+    border-radius: 15px;
+}
+.box{
+    text-align: center;
+}
+h1 {
+    background: -webkit-linear-gradient(#833ab4,#fcb045,#fd1d1d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 25px;
+  }

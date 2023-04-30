@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+
+    <link rel="stylesheet" href="/style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="hours">
+                <h1 id="hours">00</h1>
+            </div>
+            <h1>Hours</h1>
+        </div>
+
+        <div class="box">
+            <div class="minites">
+                <h1 id="minites">00</h1>
+            </div>
+            <h1>Minutes</h1>
+        </div>
+
+        <div class="box">
+            <div class="secound">
+                <h1 id="secound">00</h1>
+            </div>
+            <h1>seconds</h1>
+        </div>
+
+        <div class="box">
+            <div class="am">
+                <h1 id="am">AM</h1>
+            </div>
+            <h1>AM/PM</h1>
+        </div>
+    </div>
+
+
+
+    <script>
+        function display(){
+    let date = new Date();
+    let hrs = date.getHours();
+    let min = date.getMinutes();
+    let sec = date.getSeconds();
+    let am = document.getElementById('am');
+
+    if(hrs >=12){
+        am.innerHTML ='PM';
+    }
+    else{
+        am.innerHTML ='AM';
+    }
+
+    if( hrs > 12){
+        hrs = hrs-12;
+    }
+
+    document.getElementById('hours').innerHTML= hrs;
+    document.getElementById('minites').innerHTML= min;
+    document.getElementById('secound').innerHTML= sec;
+
+}
+setInterval(display,10);
+    </script>
+
+</body>
+</html>
